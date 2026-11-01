@@ -19,11 +19,12 @@ jib {
             }
         }
     }
-    to { // 생성할 이미지명
+    to {
+        // 생성할 이미지명
         image = "springboot-sns:latest"
     }
     container {
-        ports = listOf("8080") //포트 명시화
+        ports = listOf("8080") // 포트 명시화
         // non-root 실행 - 외부침투가 되더라도 루트 권한으로 실행되지 않게 함
         user = "1000:1000" // 사용자 아이디 : 그룹 아이디
     }
