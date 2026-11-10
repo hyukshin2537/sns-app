@@ -14,7 +14,7 @@ jib {
         platforms {
             platform {
                 // Apple Silicon 과 Intel 을 모두 지원하도록 빌드 머신 아키텍처를 따른다
-                architecture = if (System.getProperty("os.arch") == "aarch64") "arm64" else "amd64"
+                architecture = "arm64"
                 os = "linux"
             }
         }
@@ -48,6 +48,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("io.micrometer:micrometer-registry-prometheus")
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.springframework.boot:spring-boot-starter-data-redis")
     implementation("org.springframework.session:spring-session-data-redis")
