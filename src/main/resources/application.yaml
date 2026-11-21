@@ -36,7 +36,6 @@ logging:
     json:
       add:
         service_name: "${spring.application.name}"
-
 rustfs:
   endpoint: http://localhost:9000
   access-key: rustfsadmin
